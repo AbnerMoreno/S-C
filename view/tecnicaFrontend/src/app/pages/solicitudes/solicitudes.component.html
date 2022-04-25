@@ -1,29 +1,28 @@
-<!-- <div class="col-md-4 offset-md-2">
-    <div class="card">
-      <div class="card-body">
-        <form action="">
-          <div class="form-group">
-            <input type="text" name="title" [(ngModel)]="game.title" placeholder="Title" class="form-control" autofocus>
-          </div>
-          <div class="form-group">
-            <textarea name="description" [(ngModel)]="game.description" rows="2" placeholder="Description" class="form-control"></textarea>
-          </div>
-          <div class="form-group">
-            <input type="url" name="image URL" [(ngModel)]="game.image" placeholder="Image" class="form-control">
-          </div>
-          <button class="btn btn-success btn-block" (click)="edit ? updateGame() : saveNewGame()">
-            Save
-          </button>
-        </form>
-      </div>
+<div class="col-md-5 offset-md-3" style="margin-top: 15px;">
+  <div class="card">
+    <div class="card-body">
+      <form action="">
+        <div class="form-group">
+          <input type="text" name="title" [(ngModel)]="creat.name" placeholder="Title" class="form-control" autofocus>
+        </div>
+        <div class="form-group">
+          <textarea name="description" [(ngModel)]="creat.description" rows="2" placeholder="Description" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+          <input type="number" [(ngModel)]="creat.price" placeholder="Price" class="form-control">
+        </div>
+        <button class="btn btn-success btn-block" (click)="newProduct()">
+          Save
+        </button>
+      </form>
     </div>
   </div>
-  
-  <div class="col-md-4">
-    <div class="card card-body text-center">
-    <img [src]="game.image == '' ? '/assets/noimage.png' : game.image" alt="No Image" class="card-img-top">
-      <h3>{{game.id}}. {{game.title == '' ? 'Game Title' : game.title}}</h3>
-      <p>{{game.description == '' ? 'Write your Descrition' : game.description}}</p>
-      <p>{{game.created_at | date: 'yyyy-MM-dd'}}</p>
-    </div>
-  </div> -->
+</div>
+
+<div class="col-md-5 offset-md-3">
+  <div class="card card-body text-center">
+    <h3>{{creat.name == '' ? 'Name Product' : creat.name}}</h3>
+    <p>{{creat.description == '' ? 'Write your Description' : creat.description}}</p>
+    <p>${{creat.price == '' ? 'Price' : creat.price}}</p>
+  </div>
+</div>

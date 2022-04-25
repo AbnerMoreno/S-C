@@ -1,1 +1,16 @@
-<p>pedidos works!</p>
+<div class="contenedor">
+    <div class="card text-center cardsSize" *ngFor="let ls of list">
+      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+        {{ls.name}}
+          <img class="img" src="../../../assets/img/trash-outline.svg" alt="">
+      </div>
+      <img class="card-img-top" [src]="ls.image">
+      <div class="card-body">
+        <p>{{ls.description}}</p>
+        <p>Created At {{ls.created_at | date: 'yyyy-MM-dd'}}</p>
+        <a [routerLink]="['/games/edit', ls.id]" class="btn btn-info btn-block">
+          EDIT PRODUCT
+        </a>
+      </div>
+    </div>
+  </div>

@@ -9,7 +9,6 @@ import { NavComponent } from './pages/nav/nav.component';
 import { AdminComponent } from './pages/admin/admin.component';;
 import { PedidosComponent } from './pages/pedidos/pedidos.component';
 import { SolicitudesComponent } from './pages/solicitudes/solicitudes.component';
-import { HomeComponent } from './pages/home/home/home.component';
 import { CreatProductComponent } from './pages/creat-product/creat-product.component';
 import { ListProductsComponent } from './pages/list-products/list-products.component';
 
@@ -20,7 +19,6 @@ import { ListProductsComponent } from './pages/list-products/list-products.compo
     AdminComponent,
     PedidosComponent,
     SolicitudesComponent,
-    HomeComponent,
     CreatProductComponent,
     ListProductsComponent
   ],
