@@ -1,0 +1,9 @@
+CREATE TABLE products(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50), 
+    description VARCHAR(50),
+    price VARCHAR(10),
+    lot VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
