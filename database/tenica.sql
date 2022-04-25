@@ -3,7 +3,26 @@ CREATE TABLE products(
     name VARCHAR(50), 
     description VARCHAR(50),
     price VARCHAR(10),
-    lot VARCHAR(50),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE users(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50), 
+    apellido VARCHAR(50),
+    ciudad VARCHAR(10),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+CREATE TABLE pedidos(
+    id SERIAL PRIMARY KEY,
+    idUsuario BIGINT,
+    idProducts BIGINT,
+    cantidad VARCHAR(50), 
+    status BOOLEAN,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

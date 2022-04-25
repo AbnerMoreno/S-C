@@ -1,0 +1,24 @@
+.contenedor{
+    // height: 280px;
+    // width: 100%;
+    margin: 40px 0px 0px 30px;
+    // perspective: 1000px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 200px);
+    // overflow-y: scroll;
+  
+}
+
+.img{
+    height: 20px;
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(88%) saturate(1924%) hue-rotate(343deg) brightness(102%) contrast(80%);
+    color: #ac3232;
+    cursor: pointer;
+}
+
+.cardsSize{
+    width: 200px;
+    height: 250px;
+}

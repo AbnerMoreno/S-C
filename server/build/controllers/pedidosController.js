@@ -12,10 +12,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.productController = void 0;
 const database_1 = require("../database");
 class ProductController {
-    productCreate(req, res) {
+    pedidoCreate(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const { name, description, price, lot } = req.body;
-            database_1.db.query('INSERT INTO products (name, description, price) VALUES ( $1, $2, $3)', [name, description, price], (err, resp) => {
+            const { idproducts, cantidad, } = req.body;
+            database_1.db.query('INSERT INTO products (idproducts, cantidad, VALUES ( $1, $2)', [idproducts, cantidad], (err, resp) => {
                 if (err) {
                     res.json({ err });
                 }
@@ -25,9 +25,9 @@ class ProductController {
             });
         });
     }
-    productGetList(req, res) {
+    pedidotGetList(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
-            const list = yield database_1.db.query('SELECT * FROM products');
+            const list = yield database_1.db.query('SELECT * FROM pedidos');
             res.json(list.rows);
         });
     }

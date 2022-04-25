@@ -7,7 +7,8 @@ class ProductRoutes {
         this.config();
     }
     config():void{
-        this.router.get('/productCreate',productController.productCreate);
+        this.router.post('/productCreate',productController.productCreate);
+        this.router.get('/productGetList',productController.productGetList);
     }
 }
 const productRoutes = new ProductRoutes();

@@ -4,9 +4,9 @@ import { db } from "../database";
 class ProductController{
 
     
-    async productCreate (req: Request, res: Response){
-        const {name,description, price, lot} = req.body;
-        db.query('INSERT INTO products (name, description, price) VALUES ( $1, $2, $3)', [name,description,price], (err, resp) => {
+    async pedidoCreate (req: Request, res: Response){
+        const {idproducts, cantidad,} = req.body;
+        db.query('INSERT INTO products (idproducts, cantidad, VALUES ( $1, $2)', [idproducts,cantidad], (err, resp) => {
           if (err) {
             res.json({err});
           } else {
@@ -15,8 +15,8 @@ class ProductController{
         });
       }
 
-    async productGetList(req:Request, res:Response): Promise<void>{
-        const list = await db.query('SELECT * FROM products');
+    async pedidotGetList(req:Request, res:Response): Promise<void>{
+        const list = await db.query('SELECT * FROM pedidos');
         res.json(list.rows);
      }
 
