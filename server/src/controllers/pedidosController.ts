@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { db } from "../database";
 
-class ProductController{
+class PedidosController{
 
     
     async pedidoCreate (req: Request, res: Response){
@@ -50,4 +50,4 @@ class ProductController{
 
 
 }
-export const productController = new ProductController();
+export const pedidosController = new PedidosController();

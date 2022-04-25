@@ -8,6 +8,7 @@ const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
+const pedidosRoutes_1 = __importDefault(require("./routes/pedidosRoutes"));
 const corsOptions = {
     "origin": "*",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -33,6 +34,7 @@ class Server {
             res.send('Hello World');
         });
         this.app.use('/api/product', productRoutes_1.default);
+        this.app.use('/api/pedidos', pedidosRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

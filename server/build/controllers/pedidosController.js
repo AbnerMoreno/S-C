@@ -9,9 +9,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.productController = void 0;
+exports.pedidosController = void 0;
 const database_1 = require("../database");
-class ProductController {
+class PedidosController {
     pedidoCreate(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { idproducts, cantidad, } = req.body;
@@ -38,4 +38,4 @@ class ProductController {
         });
     }
 }
-exports.productController = new ProductController();
+exports.pedidosController = new PedidosController();
