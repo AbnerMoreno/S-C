@@ -9,6 +9,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 const productRoutes_1 = __importDefault(require("./routes/productRoutes"));
 const pedidosRoutes_1 = __importDefault(require("./routes/pedidosRoutes"));
+const usuarioRoutes_1 = __importDefault(require("./routes/usuarioRoutes"));
 const corsOptions = {
     "origin": "*",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
@@ -35,6 +36,7 @@ class Server {
         });
         this.app.use('/api/product', productRoutes_1.default);
         this.app.use('/api/pedidos', pedidosRoutes_1.default);
+        this.app.use('/api/ususario', usuarioRoutes_1.default);
     }
     start() {
         this.app.listen(this.app.get('port'), () => {

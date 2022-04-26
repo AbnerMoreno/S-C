@@ -1,16 +1,92 @@
 <div class="contenedor">
-    <div class="card text-center cardsSize" *ngFor="let ls of list">
-      <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
-        {{ls.name}}
-          <img class="img" src="../../../assets/img/trash-outline.svg" alt="">
-      </div>
-      <img class="card-img-top" [src]="ls.image">
-      <div class="card-body">
-        <p>{{ls.description}}</p>
-        <p>Created At {{ls.created_at | date: 'yyyy-MM-dd'}}</p>
-        <a [routerLink]="['/games/edit', ls.id]" class="btn btn-info btn-block">
-          EDIT PRODUCT
-        </a>
-      </div>
+    <div class="contenedor-body">
+        <div class="container__card">
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1 class="title-card-front">Pedido #1</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1 class="titulo-card-back">Acciones</h1>
+                            <div class="botonera">
+                                <input type="button" value="En Proceso">
+                                <input type="button" value="Info Pedido">
+                                <input class="botonera-red" type="button" value="Despachar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1 class="title-card-front">Pedido #2</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1 class="titulo-card-back">Acciones</h1>
+                            <div class="botonera">
+                                <input type="button" value="En Proceso">
+                                <input type="button" value="Info Pedido">
+                                <input class="botonera-red" type="button" value="Despachar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1 class="title-card-front">Pedido #3</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1 class="titulo-card-back">Acciones</h1>
+                            <div class="botonera">
+                                <input type="button" value="En Proceso">
+                                <input type="button" value="Info Pedido">
+                                <input class="botonera-red" type="button" value="Despachar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card__father">
+                <div class="card">
+                    <div class="card__front">
+                        <div class="bg"></div>
+                        <div class="body__card_front">
+                            <h1 class="title-card-front">Pedido #4</h1>
+                        </div>
+                    </div>
+                    <div class="card__back">
+                        <div class="body__card_back">
+                            <h1 class="titulo-card-back">Acciones</h1>
+                            <div class="botonera">
+                                <input type="button" value="En Proceso">
+                                <input type="button" value="Info Pedido">
+                                <input class="botonera-red" type="button" value="Despachar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
+</div>

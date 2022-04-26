@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductsService } from "../../services/products/products.service";
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-creat-product',
@@ -8,7 +9,7 @@ import { ProductsService } from "../../services/products/products.service";
 })
 export class CreatProductComponent implements OnInit {
 
-  constructor(private productsService:ProductsService) { }
+  constructor(private productsService:ProductsService, private toastr: ToastrService) { }
 
   public creat: any = {
     name: '',

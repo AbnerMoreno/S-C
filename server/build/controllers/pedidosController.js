@@ -34,7 +34,7 @@ class PedidosController {
     productDelete(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const id = parseInt(req.params.id);
-            const listServices = yield database_1.db.query('DELETE FROM services WHERE id = $1', [id]);
+            const listServices = yield database_1.db.query('DELETE FROM pedido WHERE id = $1', [id]);
         });
     }
 }

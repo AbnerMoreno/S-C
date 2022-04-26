@@ -11,7 +11,8 @@ CREATE TABLE users(
     id SERIAL PRIMARY KEY,
     name VARCHAR(50), 
     apellido VARCHAR(50),
-    ciudad VARCHAR(10),
+    role BIGINT, -- NUEVO
+    pass VARCHAR(10), -- NUEVO
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

@@ -5,6 +5,9 @@ import { PedidosComponent } from "../app/pages/pedidos/pedidos.component";
 import { SolicitudesComponent } from "../app/pages/solicitudes/solicitudes.component";
 import { ListProductsComponent } from "../app/pages/list-products/list-products.component";
 import { CreatProductComponent } from "../app/pages/creat-product/creat-product.component";
+import { LoginComponent } from "../app/pages/login/login.component";
+
+import { ValidateclienteGuard } from "./guard/validatecliente.guard";
 
 
 const routes: Routes = [
@@ -23,6 +26,11 @@ const routes: Routes = [
   {
     path: 'createPedido',
     component: CreatProductComponent,
+    canActivate: [ValidateclienteGuard],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
   }
 
 ];

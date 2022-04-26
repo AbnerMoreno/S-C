@@ -7,6 +7,7 @@ import cors from "cors";
 
 import ProductRoutes from "./routes/productRoutes";
 import PedidosRoutes from "./routes/pedidosRoutes";
+import UsuarioRoutes from "./routes/usuarioRoutes";
 
 const corsOptions={
     "origin": "*",
@@ -39,6 +40,7 @@ class Server {
 
         this.app.use('/api/product', ProductRoutes);
         this.app.use('/api/pedidos',PedidosRoutes);
+        this.app.use('/api/ususario',UsuarioRoutes);
     }
 
 
